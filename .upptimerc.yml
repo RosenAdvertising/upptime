@@ -1,36 +1,63 @@
 # Change these first
-owner: upptime # Your GitHub organization or username, where this repository lives
+owner: Rosenadvertising # Your GitHub username or organization
 repo: upptime # The name of this repository
 
+# List of sites to monitor
 sites:
-  - name: Google
-    url: https://www.google.com
-  - name: Wikipedia
-    url: https://en.wikipedia.org
-  - name: Hacker News
-    url: https://news.ycombinator.com
-  - name: Test Broken Site
-    url: https://thissitedoesnotexist.koj.co
-  - name: IPv6 test
-    url: forwardemail.net
-    port: 80
+  - name: APG Netlify Frontend
+    url: https://asiaprogolf.netlify.app/
+    method: GET
+    status: 200
+    uptime: true
+
+  - name: Render Backend
+    url: https://asia-pro-golf-backend.onrender.com/healthz # Replace with your actual Render backend URL or API health endpoint
+    method: GET
+    status: 200
+    uptime: true
+
+  - name: Render Database
+    url: dpg-cufl91dds78s73fm7jqg-a # Replace with your actual Render PostgreSQL database hostname
+    port: 5432
     check: "tcp-ping"
     ipv6: true
 
+# Status website configuration
 status-website:
-  # Add your custom domain name, or remove the `cname` line if you don't have a domain
-  # Uncomment the `baseUrl` line if you don't have a custom domain and add your repo name there
-  cname: demo.upptime.js.org
-  # baseUrl: /your-repo-name
+  cname: demo.upptime.js.org # Replace with your custom domain, or remove if not using one
+  # baseUrl: /your-repo-name  # Uncomment this if you don't have a custom domain
   logoUrl: https://raw.githubusercontent.com/upptime/upptime.js.org/master/static/img/icon.svg
-  name: Upptime
-  introTitle: "**Upptime** is the open-source uptime monitor and status page, powered entirely by GitHub."
-  introMessage: This is a sample status page which uses **real-time** data from our [GitHub repository](https://github.com/upptime/upptime). No server required — just GitHub Actions, Issues, and Pages. [**Get your own for free**](https://github.com/upptime/upptime)
+  name: Asia Pro Golf Status
+  introTitle: "**Asia Pro Golf Status** - Real-time Uptime Monitoring"
+  introMessage: >
+    This page provides **real-time uptime monitoring** for APG's servers and infrastructure.
+    It is powered by **Upptime**, an open-source GitHub-based uptime monitoring system.
+
   navbar:
     - title: Status
       href: /
     - title: GitHub
-      href: https://github.com/$OWNER/$REPO
+      href: https://github.com/Rosenadvertising/upptime
 
-# Upptime also supports notifications, assigning issues, and more
-# See https://upptime.js.org/docs/configuration
+# Check intervals (in minutes)
+# Default: 5 minutes for GitHub Actions, 10 minutes for issues
+heartbeatInterval: 5
+
+# Issue settings (GitHub alerts for downtime)
+issues:
+  open: true
+  assignees: [YOUR_GITHUB_USERNAME] # Replace with your GitHub username
+  labels: ["bug", "outage"]
+
+# Notifications (Optional)
+notifications:
+  - type: slack
+    webhookUrl: YOUR_SLACK_WEBHOOK_URL # Replace with your Slack webhook URL if needed
+  - type: email
+    to: your-email@example.com # Replace with your email for downtime alerts
+
+# Extra settings
+uptime:
+  graphs: true
+  timezone: "Asia/Tokyo" # Set to your timezone
+  silent: false
