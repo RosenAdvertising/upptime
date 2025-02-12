@@ -45,7 +45,7 @@ status-website:
     - title: Status
       href: /
     - title: GitHub
-      href: https://github.com/$OWNER/$REPO
+      href: https://github.com/RosenAdvertising/upptime
     - title: Asia Pro Golf
       href: https://asiaprogolf.netlify.app
 
