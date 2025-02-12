@@ -1,20 +1,31 @@
 # Change these first
-owner: Rosenadvertising # Your GitHub username or organization
+owner: RosenAdvertising # Your GitHub organization
 repo: upptime # The name of this repository
 
 # List of sites to monitor
 sites:
-  - name: APG Netlify Frontend
-    url: https://asiaprogolf.netlify.app/
+  - name: Asia Pro Golf Frontend
+    url: https://asiaprogolf.netlify.app
     method: GET
-    status: 200
-    uptime: true
+    expectedStatusCodes:
+      - 200
+      - 304
+    maxResponseTime: 5000
+    assignees:
+      - tobyrosen
+    headers:
+      - "User-Agent: Upptime Bot"
 
-  - name: Render Backend
-    url: https://asia-pro-golf-backend.onrender.com/healthz # Replace with your actual Render backend URL or API health endpoint
+  - name: Asia Pro Golf API
+    url: https://asia-pro-golf-backend.onrender.com/healthz
     method: GET
-    status: 200
-    uptime: true
+    expectedStatusCodes:
+      - 200
+    maxResponseTime: 10000
+    assignees:
+      - tobyrosen
+    headers:
+      - "User-Agent: Upptime Bot"
 
   - name: Render Database
     url: dpg-cufl91dds78s73fm7jqg-a # Replace with your actual Render PostgreSQL database hostname
@@ -24,20 +35,51 @@ sites:
 
 # Status website configuration
 status-website:
-  cname:  # Replace with your custom domain, or remove if not using one
-  baseUrl: /your-repo-name  # Uncomment this if you don't have a custom domain
-  logoUrl: https://raw.githubusercontent.com/upptime/upptime.js.org/master/static/img/icon.svg
+  theme: dark
+  baseUrl: /upptime
+  logoUrl: https://raw.githubusercontent.com/RosenAdvertising/asia-pro-golf-frontend/main/public/images/logo.png
   name: Asia Pro Golf Status
-  introTitle: "**Asia Pro Golf Status** - Real-time Uptime Monitoring"
-  introMessage: >
-    This page provides **real-time uptime monitoring** for APG's servers and infrastructure.
-    It is powered by **Upptime**, an open-source GitHub-based uptime monitoring system.
-
+  introTitle: "**Asia Pro Golf System Status**"
+  introMessage: Real-time uptime monitoring and status page for all Asia Pro Golf services
   navbar:
     - title: Status
       href: /
     - title: GitHub
-      href: https://github.com/Rosenadvertising/upptime
+      href: https://github.com/$OWNER/$REPO
+    - title: Asia Pro Golf
+      href: https://asiaprogolf.netlify.app
+
+# Notifications
+notifications:
+  - type: telegram
+    channel: apg-status
+    bot-token: "$TELEGRAM_BOT_TOKEN"
+    chat-id: "$TELEGRAM_CHAT_ID"
+    notification-template: |
+      ⚠️ *$SITE_NAME* is $STATUS
+      Response time: $RESPONSE_TIME ms
+      Details: $DETAILS
+    send-on-error: true
+    send-on-startup: true
+    send-on-statuses:
+      - down
+      - up
+      - degraded
+
+# Upper limits in ms after which response is considered degraded (50th percentile) or down (90th percentile)
+commitMessages:
+  readmeContent: ":pencil: Update summary in README"
+  summaryJson: ":card_file_box: Update status summary"
+  statusChange: ":arrow_up: $SITE_NAME is $STATUS"
+  graphsUpdate: ":bento: Update graphs"
+
+# Upptime also supports custom HTTP headers and checking specific text or JSON response
+i18n:
+  activeIncidents: Active Incidents
+  allSystemsOperational: All Systems Operational
+  degradedPerformance: Degraded Performance
+  completeOutage: Complete Outage
+  partialOutage: Partial Outage
 
 # Check intervals (in minutes)
 # Default: 5 minutes for GitHub Actions, 10 minutes for issues
@@ -46,15 +88,8 @@ heartbeatInterval: 5
 # Issue settings (GitHub alerts for downtime)
 issues:
   open: true
-  assignees: [YOUR_GITHUB_USERNAME] # Replace with your GitHub username
+  assignees: [tobyrosen] # Replace with your GitHub username
   labels: ["bug", "outage"]
-
-# Notifications (Optional)
-notifications:
-  - type: slack
-    webhookUrl: YOUR_SLACK_WEBHOOK_URL # Replace with your Slack webhook URL if needed
-  - type: email
-    to: your-email@example.com # Replace with your email for downtime alerts
 
 # Extra settings
 uptime:
