@@ -24,8 +24,8 @@ sites:
 
 # Status website configuration
 status-website:
-  cname: demo.upptime.js.org # Replace with your custom domain, or remove if not using one
-  # baseUrl: /your-repo-name  # Uncomment this if you don't have a custom domain
+  cname:  # Replace with your custom domain, or remove if not using one
+  baseUrl: /your-repo-name  # Uncomment this if you don't have a custom domain
   logoUrl: https://raw.githubusercontent.com/upptime/upptime.js.org/master/static/img/icon.svg
   name: Asia Pro Golf Status
   introTitle: "**Asia Pro Golf Status** - Real-time Uptime Monitoring"
