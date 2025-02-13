@@ -1,7 +1,7 @@
 url: https://asia-pro-golf-backend.onrender.com/healthz
-status: degraded
+status: down
 code: 404
-responseTime: 23156
-lastUpdated: 2025-02-13T17:07:51.472Z
+responseTime: 527
+lastUpdated: 2025-02-13T17:25:50.184Z
 startTime: 2025-02-12T11:14:48.107Z
 generator: Upptime <https://github.com/upptime/upptime>
