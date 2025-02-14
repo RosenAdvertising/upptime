@@ -42,9 +42,11 @@ sites:
 
 # Status website configuration
 status-website:
-  theme: dark
-  # Remove baseUrl to use root path
+  cname: status.asiaprogolf.com
+  baseUrl: /
   name: Asia Pro Golf Status
+  logoUrl: https://raw.githubusercontent.com/RosenAdvertising/asia-pro-golf-frontend/main/public/images/logo.png
+  theme: dark
   introTitle: "**Asia Pro Golf System Status**"
   introMessage: Real-time uptime monitoring and status page for all Asia Pro Golf services
   navbar:
