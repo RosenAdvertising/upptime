@@ -42,8 +42,7 @@ sites:
 
 # Status website configuration
 status-website:
-  cname: status.asiaprogolf.com
-  baseUrl: /
+  baseUrl: /upptime
   name: Asia Pro Golf Status
   logoUrl: https://raw.githubusercontent.com/RosenAdvertising/asia-pro-golf-frontend/main/public/images/logo.png
   theme: dark
