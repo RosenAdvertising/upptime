@@ -37,8 +37,8 @@
   },
   {
     "name": "Render Database",
-    "url": "dpg-cufl91dds78s73fm7jqg-a.singapore-postgres.render.com",
-    "icon": "https://icons.duckduckgo.com/ip3/null.ico",
+    "url": "https://asia-pro-golf-backend.onrender.com/api/healthz",
+    "icon": "https://icons.duckduckgo.com/ip3/asia-pro-golf-backend.onrender.com.ico",
     "slug": "render-database",
     "status": "down",
     "uptime": "100.00%",
