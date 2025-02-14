@@ -1,6 +1,11 @@
 # Change these first
-owner: RosenAdvertising # Your GitHub organization
-repo: upptime # The name of this repository
+owner: RosenAdvertising
+repo: upptime
+
+# Prevent automatic updates
+skipDescriptionUpdate: true
+skipTopicsUpdate: true
+skipTemplate: true
 
 # List of sites to monitor
 sites:
@@ -28,16 +33,17 @@ sites:
       - "User-Agent: Upptime Bot"
 
   - name: Render Database
-    url: dpg-cufl91dds78s73fm7jqg-a # Replace with your actual Render PostgreSQL database hostname
+    url: dpg-cufl91dds78s73fm7jqg-a.singapore-postgres.render.com
     port: 5432
     check: "tcp-ping"
-    ipv6: true
+    maxResponseTime: 5000
+    assignees:
+      - tobyrosen
 
 # Status website configuration
 status-website:
   theme: dark
-  baseUrl: /upptime
-  logoUrl: https://raw.githubusercontent.com/RosenAdvertising/asia-pro-golf-frontend/main/public/images/logo.png
+  # Remove baseUrl to use root path
   name: Asia Pro Golf Status
   introTitle: "**Asia Pro Golf System Status**"
   introMessage: Real-time uptime monitoring and status page for all Asia Pro Golf services
@@ -45,7 +51,7 @@ status-website:
     - title: Status
       href: /
     - title: GitHub
-      href: https://github.com/RosenAdvertising/upptime
+      href: https://github.com/$OWNER/$REPO
     - title: Asia Pro Golf
       href: https://asiaprogolf.netlify.app
 
@@ -94,5 +100,5 @@ issues:
 # Extra settings
 uptime:
   graphs: true
-  timezone: "Asia/Tokyo" # Set to your timezone
+  timezone: "Asia/Bangkok" # Set to your timezone
   silent: false
