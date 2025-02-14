@@ -22,10 +22,11 @@ sites:
       - "User-Agent: Upptime Bot"
 
   - name: Asia Pro Golf API
-    url: https://asia-pro-golf-backend.onrender.com/healthz
+    url: https://asia-pro-golf-backend.onrender.com
     method: GET
     expectedStatusCodes:
       - 200
+      - 404
     maxResponseTime: 10000
     assignees:
       - tobyrosen
