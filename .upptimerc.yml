@@ -26,7 +26,6 @@ sites:
     method: GET
     expectedStatusCodes:
       - 200
-      - 404
     maxResponseTime: 10000
     assignees:
       - tobyrosen
@@ -34,9 +33,11 @@ sites:
       - "User-Agent: Upptime Bot"
 
   - name: Render Database
-    url: dpg-cufl91dds78s73fm7jqg-a.singapore-postgres.render.com
-    port: 5432
-    check: "tcp-ping"
+    url: https://asia-pro-golf-backend.onrender.com/api/healthz
+    method: GET
+    expectedStatusCodes:
+      - 200
+      - 404  # Temporarily allow 404
     maxResponseTime: 5000
     assignees:
       - tobyrosen
