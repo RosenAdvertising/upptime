@@ -19,7 +19,7 @@ sites:
     assignees:
       - tobyrosen
     headers:
-      - "User-Agent: Upptime Bot"
+      - "User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36"
 
   - name: Asia Pro Golf API
     url: https://asia-pro-golf-backend.onrender.com
@@ -30,9 +30,10 @@ sites:
     assignees:
       - tobyrosen
     headers:
-      - "User-Agent: Upptime Bot"
+      - "User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36"
+      - "Accept: application/json"
 
-  - name: Render Database
+  - name: API Health Check
     url: https://asia-pro-golf-backend.onrender.com/api/healthz
     method: GET
     expectedStatusCodes:
@@ -41,6 +42,9 @@ sites:
     maxResponseTime: 5000
     assignees:
       - tobyrosen
+    headers:
+      - "User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36"
+      - "Accept: application/json"
 
 # Status website configuration
 status-website:
@@ -82,7 +86,6 @@ commitMessages:
   statusChange: ":arrow_up: $SITE_NAME is $STATUS"
   graphsUpdate: ":bento: Update graphs"
 
-# Upptime also supports custom HTTP headers and checking specific text or JSON response
 i18n:
   activeIncidents: Active Incidents
   allSystemsOperational: All Systems Operational
@@ -90,18 +93,17 @@ i18n:
   completeOutage: Complete Outage
   partialOutage: Partial Outage
 
-# Check intervals (in minutes)
-# Default: 5 minutes for GitHub Actions, 10 minutes for issues
+# Check interval (5 minutes)
 heartbeatInterval: 5
 
-# Issue settings (GitHub alerts for downtime)
+# Issue settings
 issues:
   open: true
-  assignees: [tobyrosen] # Replace with your GitHub username
+  assignees: [tobyrosen]
   labels: ["bug", "outage"]
 
 # Extra settings
 uptime:
   graphs: true
-  timezone: "Asia/Bangkok" # Set to your timezone
+  timezone: "Asia/Bangkok"
   silent: false
