@@ -19,7 +19,7 @@
   },
   {
     "name": "Asia Pro Golf API",
-    "url": "https://asia-pro-golf-backend.onrender.com/healthz",
+    "url": "https://asia-pro-golf-backend.onrender.com",
     "icon": "https://icons.duckduckgo.com/ip3/asia-pro-golf-backend.onrender.com.ico",
     "slug": "asia-pro-golf-api",
     "status": "down",
