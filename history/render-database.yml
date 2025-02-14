@@ -1,7 +1,7 @@
-url: dpg-cufl91dds78s73fm7jqg-a.singapore-postgres.render.com
+url: https://asia-pro-golf-backend.onrender.com/api/healthz
 status: up
-code: 200
-responseTime: 226
-lastUpdated: 2025-02-14T11:16:52.985Z
+code: 404
+responseTime: 611
+lastUpdated: 2025-02-14T11:22:14.744Z
 startTime: 2025-02-12T11:14:49.581Z
 generator: Upptime <https://github.com/upptime/upptime>
