@@ -10,7 +10,7 @@ skipTemplate: true
 # List of sites to monitor
 sites:
   - name: Asia Pro Golf Frontend
-    url: https://asiaprogolf.netlify.app
+    url: https://asiaprogolf.netlify.app/
     method: GET
     expectedStatusCodes:
       - 200
@@ -22,7 +22,7 @@ sites:
       - "User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36"
 
   - name: Asia Pro Golf API
-    url: https://asia-pro-golf-backend.onrender.com
+    url: https://asia-pro-golf-backend.onrender.com/
     method: GET
     expectedStatusCodes:
       - 200
@@ -93,8 +93,8 @@ i18n:
   completeOutage: Complete Outage
   partialOutage: Partial Outage
 
-# Check interval (5 minutes)
-heartbeatInterval: 5
+# Check interval (1 minute for testing)
+heartbeatInterval: 1
 
 # Issue settings
 issues:
