@@ -1,7 +1,7 @@
 [
   {
     "name": "Asia Pro Golf Frontend",
-    "url": "https://asiaprogolf.netlify.app",
+    "url": "https://asiaprogolf.netlify.app/",
     "icon": "https://icons.duckduckgo.com/ip3/asiaprogolf.netlify.app.ico",
     "slug": "asia-pro-golf-frontend",
     "status": "down",
@@ -19,7 +19,7 @@
   },
   {
     "name": "Asia Pro Golf API",
-    "url": "https://asia-pro-golf-backend.onrender.com",
+    "url": "https://asia-pro-golf-backend.onrender.com/",
     "icon": "https://icons.duckduckgo.com/ip3/asia-pro-golf-backend.onrender.com.ico",
     "slug": "asia-pro-golf-api",
     "status": "down",
