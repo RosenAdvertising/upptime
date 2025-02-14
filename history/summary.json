@@ -36,10 +36,10 @@
     "dailyMinutesDown": {}
   },
   {
-    "name": "Render Database",
+    "name": "API Health Check",
     "url": "https://asia-pro-golf-backend.onrender.com/api/healthz",
     "icon": "https://icons.duckduckgo.com/ip3/asia-pro-golf-backend.onrender.com.ico",
-    "slug": "render-database",
+    "slug": "api-health-check",
     "status": "down",
     "uptime": "100.00%",
     "uptimeDay": "100.00%",
