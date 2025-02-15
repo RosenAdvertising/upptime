@@ -37,7 +37,7 @@
   },
   {
     "name": "API Health Check",
-    "url": "https://asia-pro-golf-backend.onrender.com/api/healthz",
+    "url": "https://asia-pro-golf-backend.onrender.com/api/health",
     "icon": "https://icons.duckduckgo.com/ip3/asia-pro-golf-backend.onrender.com.ico",
     "slug": "api-health-check",
     "status": "down",
