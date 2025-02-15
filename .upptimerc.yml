@@ -34,7 +34,7 @@ sites:
       - "Accept: application/json"
 
   - name: API Health Check
-    url: https://asia-pro-golf-backend.onrender.com/api/healthz
+    url: https://asia-pro-golf-backend.onrender.com/api/health
     method: GET
     expectedStatusCodes:
       - 200
@@ -51,7 +51,7 @@ status-website:
   baseUrl: /upptime
   name: Asia Pro Golf Status
   logoUrl: https://raw.githubusercontent.com/RosenAdvertising/asia-pro-golf-frontend/main/public/images/logo.png
-  theme: dark
+  theme: light
   introTitle: "**Asia Pro Golf System Status**"
   introMessage: Real-time uptime monitoring and status page for all Asia Pro Golf services
   navbar:
